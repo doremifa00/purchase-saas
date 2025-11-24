@@ -1,0 +1,2095 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>체크이지</title>
+    <link rel="stylesheet" href="../asests/css/common.css">
+    <link rel="stylesheet" href="../asests/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../asests/css/style.css">
+    <script src="../asests/js/jquery-3.7.1.js"></script>
+    <script src="../asests/js/jquery-ui.min.js"></script>
+    <script src="../asests/js/script.js"></script>
+</head>
+<body>
+    <div class="warp">
+        <div class="company_frame">
+            <div class="main_lnb">
+                <div class="top">
+                    <div class="profile_img">
+                        <img src="../asests/images/profile.png" alt="">
+                    </div>
+                    <span class="profile_text">누리정보 통신</span>
+                </div>
+                <div class="middle">
+                    <div class="name_box">
+                        <span class="name">H</span>
+                        <span class="nickname">헤일리 김</span>
+                    </div>
+                    <div class="stauts">
+                        <span>구독중</span>
+                        <img src="../asests/images/lnb_arrow.svg" alt="">
+                    </div>
+                </div>
+                <div class="menu_list">
+                    <ul>
+                        <li class="menu_title">기초 설정
+                            <ul class="sub_title">
+                                <li><a href="company_info_01.html">회사정보 관리</a></li>
+                                <li><a href="company_info_02.html">회사정보_상세/수정</a></li>
+                                <li ><a href="company_info_03.html">계정 메뉴별 권한관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_title">기준 정보
+                            <ul class="sub_title">
+                                <li><a href="standard_01.html">매입원가 관리(단가표)</a></li>
+                                <li><a href="standard_02.html">색상별 매입원가 관리</a></li>
+                                <li><a href="standard_03.html">차감금액 관리</a></li>
+                                <li><a href="standard_04.html">기준정보관리-폰구분</a></li>
+                                <li><a href="standard_05.html">기준정보관리-상품등급</a></li>
+                                <li><a href="standard_06.html">기준정보관리-A/S항목</a></li>
+                                <li><a href="standard_07.html">기준정보관리-차감항목</a></li>
+                                <li><a href="standard_08.html">기준정보관리-보관위치</a></li>
+                                <li><a href="standard_09.html">기준정보관리-색상</a></li>
+                                <li><a href="standard_10.html">기준정보관리-오픈마켓비용</a></li>
+                                <li><a href="standard_11.html">기준정보관리-추가항목-검측비</a></li>
+                                <li><a href="standard_12.html">기준정보관리-추가항목-유통/물류비</a></li>
+                                <li><a href="standard_13.html">기준정보관리-추가항목/거래처/지사</a></li>
+                                <li><a href="standard_14.html">바기준정보관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_title on">재고관리
+                            <ul class="sub_title">
+                                <li class="on"><a href="purchase_01.html">매입관리</a></li>
+                                <li><a href="purchase_02.html">매입관리_02</a></li>
+                                <li><a href="purchase_03.html">재고 이동 관리</a></li>
+                                <li><a href="purchase_04.html">출고관리</a></li>
+                                <li><a href="purchase_05.html">출고관리_02</a></li>
+                                <li><a href="purchase_06.html">출고관리_03</a></li>
+                                <li><a href="purchase_07.html">상품제안가 고객 확인</a></li>
+                                <li><a href="purchase_08.html">반품/반입 관리</a></li>
+                                <li><a href="purchase_09.html">AS출고/입고 관리</a></li>
+                                <li><a href="purchase_10.html">AS출고/입고 관리_02</a></li>
+                                <li><a href="purchase_11.html">AS출고/입고 관리_03</a></li>
+                                <li><a href="purchase_12.html">판매관리</a></li>
+                                <li><a href="purchase_13.html">정산관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_title">현황/통계
+                            <ul class="sub_title">
+                                <li><a href="statistics_01.html">현황통계</a></li>
+                                <li><a href="statistics_02.html">재고현황_재고처별 통계</a></li>
+                                <li><a href="statistics_03.html">재고현황_보관위치별</a></li>
+                                <li><a href="statistics_04.html">재고현황_매입월별</a></li>
+                                <li><a href="statistics_05.html">재고현황_상품등급별</a></li>
+                                <li><a href="statistics_06.html">재고현황_색상별</a></li>
+                                <li><a href="statistics_07.html">재고현황_제조사별 통계</a></li>
+                                <li><a href="statistics_08.html">매입내역</a></li>
+                                <li><a href="statistics_09.html">매입내역_매입처별 통계</a></li>
+                                <li><a href="statistics_10.html">매입내역_전표/정산현황</a></li>
+                                <li><a href="statistics_11.html">매입내역_상품등급별</a></li>
+                                <li><a href="statistics_12.html">매입내역_매입일별</a></li>
+                                <li><a href="statistics_13.html">매입내역_지사별</a></li>
+                                <li><a href="statistics_14.html">매입내역_제조사별</a></li>
+                                <li><a href="statistics_15.html">매입내역_입력사원별</a></li>
+                                <li><a href="statistics_16.html">판매내역</a></li>
+                                <li><a href="statistics_17.html">출고내역</a></li>
+                                <li><a href="statistics_18.html">반품내역</a></li>
+                                <li><a href="statistics_19.html">반입내역</a></li>
+                                <li><a href="statistics_20.html">재고이동내역</a></li>
+                                <li><a href="statistics_21.html">A/S내역</a></li>
+                                <li><a href="statistics_22.html">거래처별 정산</a></li>
+                                <li><a href="statistics_23.html">기간별 실적(매입기준)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <a href="lost.html">분실도난 조회</a>
+                    <a href="">검수자 시스템</a>
+                    <a href="">창고관리</a>
+                    <a href="" class="dashboard">
+                        <img src="../asests/images/icon_dashboard.svg" alt="">
+                        <span>Dashboard</span>
+                    </a>
+                </div>
+            </div>
+            <div class="content_area">
+                <div class="left_area">
+                    <span class="title">매입관리</span>
+                    <div class="search_box_area" >
+                        <div class="search_box">
+                            <span class="title">매입정보</span>
+                            <div class="table_area">
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 40%;">
+                                        <col style="width: 60%;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                <div class="check">
+                                                    <input type="checkbox" id="chk_01">
+                                                    <label for="chk_01">매입일</label>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div class="calendar">
+                                                    <input type="text" class="cal" placeholder="2025-12-25">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>매입처</th>
+                                            <td>
+                                                <div class="input">
+                                                    <input type="text" class="search">
+                                                    <button type="button" class="search" id="searchBuyCompany">
+                                                        <img src="../asests/images/icon_search_black.svg" alt="">
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>비고</th>
+                                            <td>
+                                                <div class="input">
+                                                    <input type="text">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>송금정보</th>
+                                            <td>
+                                                <div class="input">
+                                                    <input type="text">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>정산현황</th>
+                                            <td>
+                                                <div class="radio_area w60">
+                                                    <div class="radio">
+                                                        <input type="radio" id="chk_02">
+                                                        <label for="chk_02">검수대기</label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <input type="radio" id="chk_03">
+                                                        <label for="chk_03">일부정산</label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <input type="radio" id="chk_04">
+                                                        <label for="chk_04">정산대기</label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <input type="radio" id="chk_05">
+                                                        <label for="chk_05">정산완료</label>
+                                                    </div>
+                                                </div>
+                                                <div class="button">
+                                                    <button type="button" id="billingComparison">정산비교</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="search_box">
+                            <span class="title">상품정보</span>
+                            <div class="table_area">
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 40%;">
+                                        <col style="width: 60%;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>Barcode</th>
+                                            <td class="flex">
+                                                <div class="input">
+                                                    <input type="text">
+                                                </div>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_06">
+                                                    <label for="check_06">시세(Top50)</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_07">
+                                                    <label for="check_07">모델</label>
+                                                </div>
+                                            </th>
+                                            <td  class="flex">
+                                                <div class="input">
+                                                    <input type="text" class="search">
+                                                    <button type="button" id="findProduct" class="search">
+                                                        <img src="../asests/images/icon_search_black.svg" alt="">
+                                                    </button>
+                                                </div>
+                                                <div class="input">
+                                                    <input type="text">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <div class="select">
+                                                    <select name="" id="">
+                                                        <option value="">ISMI</option>
+                                                    </select>
+                                                </div>
+                                            </th>
+                                            <td class="flex">
+                                                <div class="input">
+                                                    <input type="text">
+                                                </div>
+                                                <div class="check_area">
+                                                    <div class="check">
+                                                        <input type="checkbox" id="check_08">
+                                                        <label for="check_08">완충표시</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="check_09">
+                                                        <label for="check_09">SN표시(QR)</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>일련번호</th>
+                                            <td class="flex">
+                                                <div class="input">
+                                                    <input type="text">
+                                                </div>
+                                                <div class="select">
+                                                    <select name="" id="">
+                                                        <option value="">중고폰</option>
+                                                    </select>
+                                                </div>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_10">
+                                                    <label for="check_10">고정</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>매입원가</th>
+                                            <td class="flex">
+                                                <div class="input">
+                                                    <input type="text">
+                                                </div>
+                                                <div class="select">
+                                                    <select name="" id="">
+                                                        <option value="">상품등급</option>
+                                                    </select>
+                                                </div>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_10">
+                                                    <label for="check_10">고정</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>통신/색상</th>
+                                            <td class="flex w100">
+                                                <div class="select">
+                                                    <select name="" id="">
+                                                        <option value="">통신사</option>
+                                                    </select>
+                                                </div>
+                                                <div class="select">
+                                                    <select name="" id="">
+                                                        <option value="">색상</option>
+                                                    </select>
+                                                </div>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_10">
+                                                    <label for="check_10">고정</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>특이사항</th>
+                                            <td class="flex">
+                                                <div class="input">
+                                                    <input type="text">
+                                                </div>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_10">
+                                                    <label for="check_10">고정</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="search_box">
+                            <span class="title">원가차감항목</span>
+                            <div class="table_area">
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 40%;">
+                                        <col style="width: 60%;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">
+                                                <div class="check_area list">
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_01">
+                                                        <label for="list_01">1. 액파</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_02">
+                                                        <label for="list_02">2. 액파(백화)</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_03">
+                                                        <label for="list_03">3. 중잔</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_04">
+                                                        <label for="list_04">4. LCD</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_05">
+                                                        <label for="list_05">5. 터치 불량</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_06">
+                                                        <label for="list_06">6. 강잔</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_07">
+                                                        <label for="list_07">7. 카메라불량</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_08">
+                                                        <label for="list_08">8. 지문/페이스</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_09">
+                                                        <label for="list_09">9. 나침반</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_10">
+                                                        <label for="list_10">10. 지문/페이스</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_11">
+                                                        <label for="list_11">11. WIFI 불량</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_12">
+                                                        <label for="list_12">12. 지문/페이스</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_01">
+                                                        <label for="list_01">1. 액파</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_02">
+                                                        <label for="list_02">2. 액파(백화)</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_03">
+                                                        <label for="list_03">3. 중잔</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_04">
+                                                        <label for="list_04">4. LCD</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_05">
+                                                        <label for="list_05">5. 터치 불량</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_06">
+                                                        <label for="list_06">6. 강잔</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_07">
+                                                        <label for="list_07">7. 카메라불량</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_08">
+                                                        <label for="list_08">8. 지문/페이스</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_09">
+                                                        <label for="list_09">9. 나침반</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_10">
+                                                        <label for="list_10">10. 지문/페이스</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_11">
+                                                        <label for="list_11">11. WIFI 불량</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_12">
+                                                        <label for="list_12">12. 지문/페이스</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_01">
+                                                        <label for="list_01">1. 액파</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_02">
+                                                        <label for="list_02">2. 액파(백화)</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_03">
+                                                        <label for="list_03">3. 중잔</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_04">
+                                                        <label for="list_04">4. LCD</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_05">
+                                                        <label for="list_05">5. 터치 불량</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_06">
+                                                        <label for="list_06">6. 강잔</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_07">
+                                                        <label for="list_07">7. 카메라불량</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_08">
+                                                        <label for="list_08">8. 지문/페이스</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_09">
+                                                        <label for="list_09">9. 나침반</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_10">
+                                                        <label for="list_10">10. 지문/페이스</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_11">
+                                                        <label for="list_11">11. WIFI 불량</label>
+                                                    </div>
+                                                    <div class="check">
+                                                        <input type="checkbox" id="list_12">
+                                                        <label for="list_12">12. 지문/페이스</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>차감합계</th>
+                                            <td class="flex">
+                                                <div class="input">
+                                                    <input type="text">
+                                                </div>
+                                                <div class="check">
+                                                    <input type="checkbox" id="discount">
+                                                    <label for="discount">차감액 고정</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="search_box">
+                            <span class="title">원가차감항목</span>
+                            <div class="table_area">
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 40%;">
+                                        <col style="width: 60%;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>검측비</th>
+                                            <td class="flex">
+                                                <div class="select">
+                                                    <select name="" id="">
+                                                        <option value="">검측비</option>
+                                                    </select>
+                                                </div>
+                                                <div class="check">
+                                                    <input type="checkbox" id="fixed">
+                                                    <label for="fixed">고정</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>유통/물류비</th>
+                                            <td class="flex">
+                                                <div class="select">
+                                                    <select name="" id="">
+                                                        <option value="">검측비</option>
+                                                    </select>
+                                                </div>
+                                                <div class="check">
+                                                    <input type="checkbox" id="fixed_02">
+                                                    <label for="fixed_02">고정</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>추가합계</th>
+                                            <td>
+                                                <div class="input">
+                                                    <input type="text">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 테이블 [S] -->
+                    <div class="result_table">
+                        <div class="top_area">
+                            <div class="count">
+                                <span>검색결과</span>
+                                <span class="orangefont">3,657</span>
+                            </div>
+                            <div class="top_btn">
+                                <button type="button" class="blue">전표초기화</button>
+                                <button type="button" class="blue">비활성아이폰</button>
+                                <button type="button" class="blue">폰정보 재요청[F2]</button>
+                                <button type="button" class="blue">Barcode 설정[F4]</button>
+                                <button type="button" class="blue">행삭제</button>
+                                <button type="button" class="blue">전표삭제</button>
+                                <button type="button" class="blue">입력[F5]</button>
+                                <span class="divided"></span>
+                                <button type="button" class="normal orangebg" id="lossIntegrated">분실도난 일괄조회</button>
+                                <span class="divided"></span>
+                                <button type="button" class="normal lightblackbg">저장 후 계속[F8]</button>
+                                <button type="button" class="normal lightblackbg">저장[F9]</button>
+                                <button type="button" class="normal graybg">초기화</button>
+                            </div>
+                        </div>
+                        <div class="table_area">
+                            <table>
+                                <colgroup>
+                                    <col style="width:2%">
+                                    <col style="width:7%">
+                                    <col style="width:10%">
+                                    <col style="width:4%">
+                                    <col style="width:4%">
+                                    <col style="width:4%">
+                                    <col style="width:4%">
+                                    <col style="width:4%">
+                                    <col style="width:4%">
+                                    <col style="width:4%">
+                                    <col style="width:4%">
+                                    <col style="width:4%">
+                                    <col style="width:4%">
+                                    <col style="width:4%">
+                                    <col style="width:4%">
+                                    <col style="width:4%">
+                                    <col style="width:4%">
+                                    <col style="width:4%">
+                                    <col style="width:4%">
+                                    <col style="width:4%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="check">
+                                                <input type="checkbox" id="check_01">
+                                                <label for="check_01"></label>
+                                            </div>
+                                        </th>
+                                        <th>Barcode</th>
+                                        <th>모델명</th>
+                                        <th>펫네임</th>
+                                        <th>일련번호</th>
+                                        <th>IMEI
+                                            <button type="button">
+                                                <img src="../asests/images/icon_table_icon.png" alt="">
+                                            </button>
+                                        </th>
+                                        <th>IMEI2</th>
+                                        <th>매입원가</th>
+                                        <th>색상</th>
+                                        <th>통신사</th>
+                                        <th>폰종류</th>
+                                        <th>차감항목</th>
+                                        <th>차감금액</th>
+                                        <th>추가항목</th>
+                                        <th>추가금액</th>
+                                        <th>실매입가</th>
+                                        <th>특이사항</th>
+                                        <th>리퍼기간</th>
+                                        <th>분실여부1</th>
+                                        <th>분실여부2</th>
+                                        <th>상품등급</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="check">
+                                                <input type="checkbox" id="check_02">
+                                                <label for="check_02"></label>
+                                            </div>
+                                        </td>
+                                        <td>AIP12 Pro Max-128G_R</td>
+                                        <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check">
+                                                <input type="checkbox" id="check_02">
+                                                <label for="check_02"></label>
+                                            </div>
+                                        </td>
+                                        <td>AIP12 Pro Max-128G_R</td>
+                                        <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check">
+                                                <input type="checkbox" id="check_02">
+                                                <label for="check_02"></label>
+                                            </div>
+                                        </td>
+                                        <td>AIP12 Pro Max-128G_R</td>
+                                        <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check">
+                                                <input type="checkbox" id="check_02">
+                                                <label for="check_02"></label>
+                                            </div>
+                                        </td>
+                                        <td>AIP12 Pro Max-128G_R</td>
+                                        <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check">
+                                                <input type="checkbox" id="check_02">
+                                                <label for="check_02"></label>
+                                            </div>
+                                        </td>
+                                        <td>AIP12 Pro Max-128G_R</td>
+                                        <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check">
+                                                <input type="checkbox" id="check_02">
+                                                <label for="check_02"></label>
+                                            </div>
+                                        </td>
+                                        <td>AIP12 Pro Max-128G_R</td>
+                                        <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check">
+                                                <input type="checkbox" id="check_02">
+                                                <label for="check_02"></label>
+                                            </div>
+                                        </td>
+                                        <td>AIP12 Pro Max-128G_R</td>
+                                        <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check">
+                                                <input type="checkbox" id="check_02">
+                                                <label for="check_02"></label>
+                                            </div>
+                                        </td>
+                                        <td>AIP12 Pro Max-128G_R</td>
+                                        <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check">
+                                                <input type="checkbox" id="check_02">
+                                                <label for="check_02"></label>
+                                            </div>
+                                        </td>
+                                        <td>AIP12 Pro Max-128G_R</td>
+                                        <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check">
+                                                <input type="checkbox" id="check_02">
+                                                <label for="check_02"></label>
+                                            </div>
+                                        </td>
+                                        <td>AIP12 Pro Max-128G_R</td>
+                                        <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check">
+                                                <input type="checkbox" id="check_02">
+                                                <label for="check_02"></label>
+                                            </div>
+                                        </td>
+                                        <td>AIP12 Pro Max-128G_R</td>
+                                        <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                        <td>990,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- 테이블 [E] -->
+
+                    <!-- 테이블 [S] -->
+                    <div class="result_table">
+                        <div class="top_area">
+                            <div class="count">
+                                <span>검색결과</span>
+                                <span class="orangefont">3,657</span>
+                            </div>
+                            <div class="top_btn">
+                                <button type="button" class="blue" id="priceAdjustment">매입가 일괄수정</button>
+                                <button type="button" class="blue">전표 내 검색</button>
+                                <span class="divided"></span>
+                                <button type="button" class="normal green">거래명세서</button>
+                                <button type="button" class="normal green">매입자료 일괄변환</button>
+                                <span class="divided"></span>
+                                <button type="button" class="normal orangebg" id="voucherDetails">전표목록 검색</button>
+                            </div>
+                        </div>
+                        <div class="table_area">
+                            <table>
+                                <colgroup>
+                                    <col style="width:10%">
+                                    <col style="width:10%">
+                                    <col style="width:10%">
+                                    <col style="width:10%">
+                                    <col style="width:10%">
+                                    <col style="width:10%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>모델명</th>
+                                        <th>수량</th>
+                                        <th>매입원가 합계</th>
+                                        <th>차감금액 합계</th>
+                                        <th>추가금액 합계</th>
+                                        <th>실매입가 합계</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- 테이블 [E] -->
+                </div>
+
+                <div class="right_lnb">
+                    <button type="button">
+                        <img src="../asests/images/icon_arrow_right.svg" alt="">
+                    </button>
+                    <div class="result_table">
+                        <div class="top_area">
+                            <div class="count calendar_area">
+                                <span>조회기간</span>
+                                <div class="input">
+                                    <div class="calendar">
+                                        <input type="text">
+                                    </div>
+                                    <span>~</span>
+                                    <div class="calendar">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="top_btn">
+                                <button type="button" class="normal lightblackbg">저장</button>
+                            </div>
+                        </div>
+                        <div class="table_area">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>단가표 생성일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="hover">2024-12-01</td>
+                                </tr>
+                                <tr>
+                                    <td class="hover">2024-12-01</td>
+                                </tr>
+                                <tr>
+                                    <td class="hover">2024-12-01</td>
+                                </tr>
+                                <tr>
+                                    <td class="hover">2024-12-01</td>
+                                </tr>
+                                <tr>
+                                    <td class="hover">2024-12-01</td>
+                                </tr>
+                                <tr>
+                                    <td class="hover">2024-12-01</td>
+                                </tr>
+                                <tr>
+                                    <td class="hover">2024-12-01</td>
+                                </tr>
+                                <tr>
+                                    <td class="hover">2024-12-01</td>
+                                </tr>
+                                <tr>
+                                    <td class="hover">2024-12-01</td>
+                                </tr>
+                                <tr>
+                                    <td class="hover">2024-12-01</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 매입처 검색 -->
+        <div id="searchBuyCompany" class="layer_wrap w460">
+            <div class="layer_area">
+                <div class="top_area">
+                    <span class="title">매입처 검색/선택</span>
+                    <button type="button" class="close">
+                        <img src="../asests/images/icon_close.svg" alt="">
+                    </button>
+                </div>
+                <div class="middle_area content_area">
+                    <div class="search_area">
+                        <div class="radio_area">
+                            <div class="radio">
+                                <input type="radio" id="rd_01">
+                                <label for="rd_01">거래처 Code</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" id="rd_02">
+                                <label for="rd_02">거래처 명칭</label>
+                            </div>
+                            <div class="input">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="search_button">
+                            <button type="button" class="refrash">
+                                <img src="../asests/images/icon_refrash.svg" alt="">
+                            </button>
+                            <button type="button" class="search">
+                                <img src="../asests/images/icon_search_white.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+        
+                    <div class="result_table">
+                        <div class="top_area">
+                            <div class="top_btn">
+                                <button type="button" class="normal graybg">선택</button>
+                                <button type="button" class="normal graybg">거래처/지사 관리</button>
+                            </div>
+                        </div>
+                        <div class="table_area">
+                            <div class="table_scroll">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:5%">
+                                        <col style="width:20%">
+                                        <col style="width:30%">
+                                        <col style="width:10%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_01">
+                                                    <label for="check_01"></label>
+                                                </div>
+                                            </th>
+                                            <th>모델명</th>
+                                            <th>펫네임
+                                                <button type="button">
+                                                    <img src="../asests/images/icon_table_icon.png" alt="">
+                                                </button>
+                                            </th>
+                                            <th>제조사명</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 매입처 검색 -->
+
+        <!-- 상품 모델 선택 -->
+        <div id="findProduct" class="layer_wrap w460">
+            <div class="layer_area">
+                <div class="top_area">
+                    <span class="title">상품 모델 선택</span>
+                    <button type="button" class="close">
+                        <img src="../asests/images/icon_close.svg" alt="">
+                    </button>
+                </div>
+                <div class="middle_area content_area">
+                    <div class="search_area">
+                        <div class="radio_area">
+                            <div class="radio">
+                                <input type="radio" id="rd_01">
+                                <label for="rd_01">모델명</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" id="rd_02">
+                                <label for="rd_02">펫네임</label>
+                            </div>
+                            <div class="input">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="search_button">
+                            <button type="button" class="refrash">
+                                <img src="../asests/images/icon_refrash.svg" alt="">
+                            </button>
+                            <button type="button" class="search">
+                                <img src="../asests/images/icon_search_white.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+        
+                    <div class="result_table">
+                        <div class="top_area">
+                            <div class="top_btn">
+                                <button type="button" class="normal graybg">선택</button>
+                                <button type="button" class="normal lightblackbg">모델추가</button>
+                            </div>
+                        </div>
+                        <div class="table_area">
+                            <div class="table_scroll">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:5%">
+                                        <col style="width:20%">
+                                        <col style="width:30%">
+                                        <col style="width:10%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_01">
+                                                    <label for="check_01"></label>
+                                                </div>
+                                            </th>
+                                            <th>모델명</th>
+                                            <th>펫네임
+                                                <button type="button">
+                                                    <img src="../asests/images/icon_table_icon.png" alt="">
+                                                </button>
+                                            </th>
+                                            <th>제조사명</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>AIP12 Pro Max-128G_R</td>
+                                            <td>아이폰12 프로맥스 128G(리퍼)</td>
+                                            <td>APPLE</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 상품 모델 선택 -->
+
+         <!-- 정산비고 -->
+         <div id="billingComparison" class="layer_wrap w460">
+            <div class="layer_area">
+                <div class="top_area">
+                    <span class="title">정산비고</span>
+                    <button type="button" class="close">
+                        <img src="../asests/images/icon_close.svg" alt="">
+                    </button>
+                </div>
+                <div class="middle_area content_area">
+                    <div class="result_table mt20">
+                        <div class="top_area">
+                            <div class="top_btn">
+                                <button type="button" class="normal lightblackbg">저장</button>
+                            </div>
+                        </div>
+                        <div class="text_area">
+                            <textarea name="" id=""></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 정산비고 -->
+
+        <!-- 분실도난 일괄조회 -->
+        <div id="lossIntegrated" class="layer_wrap w580">
+            <div class="layer_area">
+                <div class="top_area">
+                    <span class="title">분실도난 일괄조희</span>
+                    <button type="button" class="close">
+                        <img src="../asests/images/icon_close.svg" alt="">
+                    </button>
+                </div>
+                <div class="middle_area content_area">
+                    <div class="search_wrap">
+                        <div class="search_area">
+                            <div class="radio_area">
+                                <div class="radio">
+                                    <input type="radio" id="rd_01">
+                                    <label for="rd_01">전체조회</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="rd_02">
+                                    <label for="rd_02">미조회건만 조회</label>
+                                </div>
+                            </div>
+                            <div class="check_area ml5">
+                                <div class="check">
+                                    <input type="checkbox" id="chk_01">
+                                    <label for="chk_01">IMEI 1조회</label>
+                                </div>
+                                <div class="check">
+                                    <input type="checkbox" id="chk_02">
+                                    <label for="chk_02">IMEI 2조회</label>
+                                </div>
+                                <div class="check">
+                                    <input type="checkbox" id="chk_03">
+                                    <label for="chk_03">페폰 조회</label>
+                                </div>
+                            </div>
+                            <div class="search_button">
+                                <button type="button" class="refrash">
+                                    <img src="../asests/images/icon_refrash.svg" alt="">
+                                </button>
+                                <button type="button" class="search">
+                                    <img src="../asests/images/icon_search_white.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="search_area">
+                            <p>전체 수량 : 3대</p>
+                            <p>|</p>
+                            <p>조회할 수량 : 1대</p>
+                        </div>
+                    </div>
+                    <div class="result_table v2">
+                        <div class="table_area ">
+                            <table>
+                                <colgroup>
+                                    <col style="width:25%">
+                                    <col style="width:25%">
+                                    <col style="width:25%">
+                                    <col style="width:25%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>조회결과</th>
+                                        <td>총 수량 3대</td>
+                                        <th>검사 IMEI</th>
+                                        <td>3개</td>
+                                    </tr>
+                                    <tr>
+                                        <th>미검사 수량</th>
+                                        <td>3개</td>
+                                        <th>정상</th>
+                                        <td>3개</td>
+                                    </tr>
+                                    <tr>
+                                        <th>이상</th>
+                                        <td>0개</td>
+                                        <th>조회오류</th>
+                                        <td>0개</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 분실도난 일괄조회 -->
+
+        <!-- 상품별 전표처리 내역 -->
+        <div id="voucherDetails" class="layer_wrap w670">
+            <div class="layer_area">
+                <div class="top_area">
+                    <span class="title">상품별 전표처리 내역</span>
+                    <button type="button" class="close">
+                        <img src="../asests/images/icon_close.svg" alt="">
+                    </button>
+                </div>
+                <div class="middle_area content_area">
+                    <div class="search_area">
+                        <div class="input_box v2">
+                            <span class="title">Barcod</span>
+                            <div class="input">
+                                <input type="text" placeholder="입력">
+                            </div>
+                        </div>
+                        <div class="input_box v2">
+                            <div class="select">
+                                <select name="" id="">
+                                    <option value="">IMEI</option>
+                                </select>
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="입력">
+                            </div>
+                        </div>
+                        <div class="input_box v2">
+                            <div class="select">
+                                <select name="" id="">
+                                    <option value="">특이사항</option>
+                                </select>
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="입력">
+                            </div>
+                        </div>
+                        <div class="search_button">
+                            <button type="button" class="refrash">
+                                <img src="../asests/images/icon_refrash.svg" alt="">
+                            </button>
+                            <button type="button" class="search">
+                                <img src="../asests/images/icon_search_white.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="result_table">
+                        <div class="top_area">
+                            <div class="top_btn">
+                                <button type="button" class="normal graybg">읽기</button>
+                                <button type="button" class="normal graybg">인쇄</button>
+                            </div>
+                        </div>
+                        <div class="table_area">
+                            <div class="table_scroll v2">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:5%">
+                                        <col style="width:20%">
+                                        <col style="width:30%">
+                                        <col style="width:10%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_01">
+                                                    <label for="check_01"></label>
+                                                </div>
+                                            </th>
+                                            <th>Barcode</th>
+                                            <th>모델명</th>
+                                            <th>IMEI</th>
+                                            <th>일련번호</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>C12345678</td>
+                                            <td>SM-AAAA_BBBB</td>
+                                            <td>090000000000</td>
+                                            <td>03137921</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>C12345678</td>
+                                            <td>SM-AAAA_BBBB</td>
+                                            <td>090000000000</td>
+                                            <td>03137921</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>C12345678</td>
+                                            <td>SM-AAAA_BBBB</td>
+                                            <td>090000000000</td>
+                                            <td>03137921</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>C12345678</td>
+                                            <td>SM-AAAA_BBBB</td>
+                                            <td>090000000000</td>
+                                            <td>03137921</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>C12345678</td>
+                                            <td>SM-AAAA_BBBB</td>
+                                            <td>090000000000</td>
+                                            <td>03137921</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>C12345678</td>
+                                            <td>SM-AAAA_BBBB</td>
+                                            <td>090000000000</td>
+                                            <td>03137921</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>C12345678</td>
+                                            <td>SM-AAAA_BBBB</td>
+                                            <td>090000000000</td>
+                                            <td>03137921</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>C12345678</td>
+                                            <td>SM-AAAA_BBBB</td>
+                                            <td>090000000000</td>
+                                            <td>03137921</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result_table">
+                        <div class="top_area">
+                            <div class="top_btn">
+                                <button type="button" class="normal graybg">분실도난조회</button>
+                                <button type="button" class="normal graybg">리퍼기간조회</button>
+                                <button type="button" class="normal graybg">요금할인조회</button>
+                                <button type="button" class="normal graybg">특이사항</button>
+                                <button type="button" class="normal graybg">상세내역포함</button>
+                            </div>
+                        </div>
+                        <div class="text_area">
+                            <p>Barcode : C0000000000</p>
+                            <p> 모델명 : AIP 12 Pro-100G</p>
+                            <p> 펫네임 : 아이폰12프로 256G</p>
+                            <p> IMEI/IMEI2 : 35145262432363262</p>
+                            <p> 일련번호 : 0321415123</p>
+                            <p> 매입처 : 창원팀</p>
+                            <p> 현상태 : 판매(필리핀(B1))</p>
+                            <p> 폰구분/색상 : 중고폰</p>
+                            <p> 실매입가 : 1,000,000원</p>
+                            <textarea name="" id="" placeholder="===================
+                            매입일 : 2022-05-31
+                            매입처 : 창원팀 매입처 : 창원팀"></textarea>
+                            <div class="top_area v2">
+                                <div class="top_btn">
+                                    <button type="button" class="normal graybg">판매</button>
+                                    <button type="button" class="normal graybg">출고하기</button>
+                                    <button type="button" class="normal graybg">반입하기</button>
+                                    <button type="button" class="normal graybg">반품하기</button>
+                                    <button type="button" class="normal graybg">AS출고하기</button>
+                                    <button type="button" class="normal graybg">AS반입하기</button>
+                                </div>
+                                <div class="top_btn">
+                                    <button type="button" class="normal graybg">매입</button>
+                                    <button type="button" class="normal graybg">출고</button>
+                                    <button type="button" class="normal graybg">반입</button>
+                                    <button type="button" class="normal graybg">반품</button>
+                                    <button type="button" class="normal graybg">AS출고</button>
+                                    <button type="button" class="normal graybg">AS반입</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 상품별 전표처리 내역 -->
+
+        <!-- 매입가 일괄조정 -->
+        <div id="priceAdjustment" class="layer_wrap w720">
+            <div class="layer_area">
+                <div class="top_area">
+                    <span class="title">매입가 일괄조정</span>
+                    <button type="button" class="close">
+                        <img src="../asests/images/icon_close.svg" alt="">
+                    </button>
+                </div>
+                <div class="middle_area content_area">
+                    <div class="search_wrap v2">
+                        <div class="search_area">
+                            <div class="radio_area">
+                                <div class="radio">
+                                    <input type="radio" id="rd_01">
+                                    <label for="rd_01">모델</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="rd_02">
+                                    <label for="rd_02">펫네임</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="rd_03">
+                                    <label for="rd_03">모델그룹</label>
+                                </div>
+                                <div class="select ml5">
+                                    <select name="" id="">
+                                        <option value="">전체</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="search_button">
+                                <button type="button" class="refrash">
+                                    <img src="../asests/images/icon_refrash.svg" alt="">
+                                </button>
+                                <button type="button" class="search">
+                                    <img src="../asests/images/icon_search_white.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="search_area">
+                            <div class="input_box">
+                                <span class="title">폰구분</span>
+                                <div class="select">
+                                    <select name="" id="">
+                                        <option value="">전체</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input_box">
+                                <span class="title">상품등급</span>
+                                <div class="select">
+                                    <select name="" id="">
+                                        <option value="">전체</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input_box">
+                                <span class="title">통신사</span>
+                                <div class="select">
+                                    <select name="" id="">
+                                        <option value="">전체</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input_box">
+                                <span class="title">색상</span>
+                                <div class="select">
+                                    <select name="" id="">
+                                        <option value="">전체</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search_wrap v2">
+                        <span class="title">일괄조정 항목</span>
+                        <div class="search_area">
+                            <div class="input_box">
+                                <span class="title">원가추가</span>
+                                <div class="input">
+                                    <input type="text" placeholder="0">
+                                </div>
+                            </div>
+                            <div class="input_box">
+                                <span class="title">차감금액</span>
+                                <div class="input">
+                                    <input type="text" placeholder="0">
+                                </div>
+                            </div>
+                            <div class="input_box">
+                                <span class="title">추가금액</span>
+                                <div class="input">
+                                    <input type="text" placeholder="0">
+                                </div>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="chk_01">
+                                <label for="chk_01">'0'인 셀 제외</label>
+                            </div>
+                        </div>
+                        <div class="search_area">
+                            <div class="input_box">
+                                <span class="title">매입원가 백분율 조정</span>
+                                <div class="input">
+                                    <input type="text" placeholder="100%">
+                                </div>
+                            </div>
+                            <div class="input_box">
+                                <span class="title">매입원가 절사</span>
+                                <div class="select">
+                                    <select name="" id="">
+                                        <option value="">전체</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result_table">
+                        <div class="top_area">
+                            <div class="top_btn">
+                                <button type="button" class="normal orangebg">매입원가에 단가표 가격 일괄입력</button>
+                                <button type="button" class="normal graybg">일괄 조정</button>
+                                <button type="button" class="normal graybg">적용</button>
+                            </div>
+                        </div>
+                        <div class="table_area">
+                            <div class="table_scroll">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:5%">
+                                        <col style="width:20%">
+                                        <col style="width:30%">
+                                        <col style="width:10%">
+                                        <col style="width:5%">
+                                        <col style="width:5%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_01">
+                                                    <label for="check_01"></label>
+                                                </div>
+                                            </th>
+                                            <th>Barcode</th>
+                                            <th>모델명</th>
+                                            <th>펫네임</th>
+                                            <th>일련번호</th>
+                                            <th>IMEI</th>
+                                            <th>IMEI2</th>
+                                            <th>색상</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>C12345678</td>
+                                            <td>SM-AAAA_BBBB</td>
+                                            <td>090000000000</td>
+                                            <td>03137921</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>C12345678</td>
+                                            <td>SM-AAAA_BBBB</td>
+                                            <td>090000000000</td>
+                                            <td>03137921</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>C12345678</td>
+                                            <td>SM-AAAA_BBBB</td>
+                                            <td>090000000000</td>
+                                            <td>03137921</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>C12345678</td>
+                                            <td>SM-AAAA_BBBB</td>
+                                            <td>090000000000</td>
+                                            <td>03137921</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>C12345678</td>
+                                            <td>SM-AAAA_BBBB</td>
+                                            <td>090000000000</td>
+                                            <td>03137921</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>C12345678</td>
+                                            <td>SM-AAAA_BBBB</td>
+                                            <td>090000000000</td>
+                                            <td>03137921</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>C12345678</td>
+                                            <td>SM-AAAA_BBBB</td>
+                                            <td>090000000000</td>
+                                            <td>03137921</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check">
+                                                    <input type="checkbox" id="check_02">
+                                                    <label for="check_02"></label>
+                                                </div>
+                                            </td>
+                                            <td>C12345678</td>
+                                            <td>SM-AAAA_BBBB</td>
+                                            <td>090000000000</td>
+                                            <td>03137921</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 매입가 일괄조정 -->
+    </div>
+</body>
+</html>
